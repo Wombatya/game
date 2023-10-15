@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shooting</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="img/icon.ico" type="image/ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="modal-rules">
+      <div class="modal-rules-content">
+      <p class="modal-rules-text">You have 30 seconds. You need to shoot as many objects as possible.</p>
+      <button class="modal-rules-close">Okay</button> 
+    </div>
+      </div>
+      <div class="modal-end">
+        <div class="modal-end-content">
+          <h2 class="modal-end-heading"> Time is over</h2>
+          <span>You score: <span class='final-score'> 0</span> </span>
+
+          <label class="input-text" for="player-name">Enter your name</label>
+          <input class="field" type="text" name="player-name"/>
+
+          <button class='modal-end-close'>Submit</button>
+        </div>
+      </div>
+    <div class="container">
+      <header>
+        <div class="header-wrapper">
+          <div class="timer">
+            00 : <span class='seconds'> 00</span>
+          </div>
+          <div class="shooting">Shooting</div>
+          <div class="score">
+            Score: <span class="score-points">0</span>
+          </div>
+        </div>
+      </header>
+      <main>
+
+      </main>
+      <footer>
+
+      </footer>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
