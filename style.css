@@ -171,7 +171,7 @@
 
   .right {
     animation-name: move-right;
-    animation-duration: 3s;
+    animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
   }
@@ -185,35 +185,35 @@
 
   .up {
     animation-name: move-up;
-    animation-duration: 3s;
+    animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
   }
 
   .down {
     animation-name: move-down;
-    animation-duration: 3s;
+    animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
   }
 
   .diagonal {
     animation-name: move-diagonal;
-    animation-duration: 3s;
+    animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
   }
 
   .reverse-diagonal {
     animation-name: move-reverse-diagonal;
-    animation-duration: 3s;
+    animation-duration: 6s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
   }
 
   .scale {
     animation-name: move-scale;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
   }
@@ -281,6 +281,9 @@
     }
   }
   
+  .killed {
+    display: none;
+  }
 
   footer {
     position: absolute;

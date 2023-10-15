@@ -8,11 +8,12 @@ const scorePoints = document.querySelector('.score-points');
 const big = document.querySelectorAll('.big');
 const medium = document.querySelectorAll('.medium');
 const small = document.querySelectorAll('.small');
+const hit = document.querySelector('.hit');
+const miss = document.querySelector('.miss')
 
 let counter = 0;
 
 let random = Math.random().toString().slice(0, 3) * 10;
-console.log(random);
 
 let background = [
   "background1.jpg",
@@ -45,6 +46,35 @@ function start() {
       }, 1000);
     }
 
+    function replay() {
+        big.forEach((el) => {
+            el.classList.remove('killed');
+        });
+        medium.forEach((el) => {
+            el.classList.remove('killed');
+        });
+        small.forEach((el) => {
+            el.classList.remove('killed');
+        });
+    }
+
+    function playShot(e) {
+        let el = e.target;
+        if(el.classList.contains('big') || el.classList.contains('medium') || el.classList.contains('small')) {
+         hit.stop();
+         hit.play();
+         counter++;
+         scorePoints.textContent = counter;
+         el.classList.add('killed');
+         if(counter == 30) {
+          setTimeout(replay,400);
+         }
+        } else {
+         miss.stop();
+         miss.play();
+        }
+       }
+
 container.style.backgroundImage = `url(img/${background[random]})`;
 
 big.forEach((el) => {
@@ -72,4 +102,11 @@ modalRulesCloseBtn.addEventListener('click', function() {
     small.forEach((el) => {
         el.classList.remove('nonactive');
     });
+    container.addEventListener('click', playShot);
   })
+
+  HTMLAudioElement.prototype.stop = function(){
+    this.pause();
+    this.currentTime = 0.0;
+   }
+
