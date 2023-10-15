@@ -3,6 +3,7 @@ const modalRules = document.querySelector('.modal-rules');
 const modalRulesCloseBtn = document.querySelector('.modal-rules-close');
 const timer = document.querySelector('.seconds');
 const modalEnd = document.querySelector('.modal-end');
+const body = document.querySelector('.body');
 
 let random = Math.random().toString().slice(0, 3) * 10;
 console.log(random);
@@ -33,6 +34,7 @@ function start() {
       clearInterval(countdown);
      timer.innerHTML = '00'
       modalEnd.classList.add('active');
+      body.classList.remove('active');
     }
       }, 1000);
     }
@@ -41,5 +43,6 @@ container.style.backgroundImage = `url(img/${background[random]})`;
 
 modalRulesCloseBtn.addEventListener('click', function() {
     modalRules.classList.add('nonactive');
+    body.classList.add('active');
     start();
   })
