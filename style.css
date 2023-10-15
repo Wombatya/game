@@ -1,6 +1,6 @@
-body {
+* {
     margin: 0;
-    overflow-x: hidden;
+    overflow: hidden;
     box-sizing: border-box;
 }
 
@@ -48,12 +48,12 @@ body {
   .modal-rules-text {
     font-family: 'Teko', sans-serif;
     margin: 15px;
-    font-size: 25px;
+    font-size: 50px;
   }
   
   .modal-rules-close {
     width: 30%;
-    height: 25px;
+    height: 15%;
     border-radius: 15px;
     cursor:pointer;
     font-family: 'Teko', sans-serif;
@@ -91,23 +91,92 @@ body {
   }
 
   .modal-end-heading {
-    margin-top: 10px;
+    margin: 0;
   }
   
   .modal-end-close {
     width: 30%;
-    height: 25px;
+    height: 15%;
     border-radius: 15px;
     cursor:pointer;
     font-family: 'Teko', sans-serif;
     font-size: 15px;
   }
 
-
-
   .timer {
     width: 105px;
   }
 
 
+  
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(178, 171, 152, 0.5);
+}
+
+.git-info {
+    display: flex;
+    width: 30%;
+    cursor: pointer;
+    align-items: center;
+}
+
+.git-pic {
+    width: 30%;
+    height: 70%;
+    margin: 2px;
+}
+
+.footer-text {
+    font-family: 'Teko', sans-serif;
+    font-size: 25px;
+    width: 70%;
+    text-align: center;
+    color: black;
+}
+
+.year {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+}
+
+.course-logo {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+.logo-pic {
+    width: 100%;
+    height: 100%;
+}
+
+.link {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+
+
+@media screen and (max-width: 768px){
+    .modal-rules-text {
+        font-family: 'Teko', sans-serif;
+        margin: 15px;
+        font-size: 25px;
+      }
+}
 
