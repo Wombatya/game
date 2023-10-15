@@ -39,7 +39,16 @@ function start() {
     timer.innerHTML = sec;
     if (remain < 0) {
       clearInterval(countdown);
-     timer.innerHTML = '00'
+     timer.innerHTML = '00';
+     big.forEach((el) => {
+        el.classList.add('nonactive');
+    });
+    medium.forEach((el) => {
+        el.classList.add('nonactive');
+    });
+    small.forEach((el) => {
+        el.classList.add('nonactive');
+    });
       modalEnd.classList.add('active');
       body.classList.remove('active');
     }
