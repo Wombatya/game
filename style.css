@@ -111,7 +111,175 @@
     width: 105px;
   }
 
+  .main-wrapper {
+    height: 100vh;
+  }
 
+  .big-wrapper {
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .big {
+    background: url('img/big-bird.png') center bottom/100px auto no-repeat;
+    width: 100px;
+    height: 100%;
+    margin: 20px;
+  }
+
+  .medium-wrapper {
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .medium {
+    background: url('img/medium-kite.png') center bottom/80px auto no-repeat;
+    width: 70px;
+    height: 100%;
+    margin: 20px;
+  }
+
+  .small-wrapper {
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .small {
+    background: url('img/small-cloud.png') center bottom/60px auto no-repeat;
+    width: 50px;
+    height: 100%;
+    margin: 20px;
+  }
+
+  .big.nonactive {
+    animation: none;
+  }
+
+  .medium.nonactive {
+    animation: none;
+  }
+
+  .small.nonactive {
+    animation: none;
+  }
+
+  .right {
+    animation-name: move-right;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+
+  .left {
+    animation-name: move-left;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+
+  .up {
+    animation-name: move-up;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+
+  .down {
+    animation-name: move-down;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+
+  .diagonal {
+    animation-name: move-diagonal;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+
+  .reverse-diagonal {
+    animation-name: move-reverse-diagonal;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+
+  .scale {
+    animation-name: move-scale;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+
+  @keyframes move-right {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(350px, 0);
+    }
+  }
+
+  @keyframes move-left {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(-350px,0);
+    }
+  }
+
+  @keyframes move-up {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(0,-350px);
+    }
+  }
+
+  @keyframes move-down {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(0,350px);
+    }
+  }
+
+  @keyframes move-diagonal {
+    form {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(350px,-350px);
+    }
+  }
+
+  @keyframes move-reverse-diagonal {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(-350px,350px);
+    }
+  }
+
+  @keyframes move-scale {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: scale(2);
+    }
+  }
   
 
   footer {

@@ -4,6 +4,12 @@ const modalRulesCloseBtn = document.querySelector('.modal-rules-close');
 const timer = document.querySelector('.seconds');
 const modalEnd = document.querySelector('.modal-end');
 const body = document.querySelector('.body');
+const scorePoints = document.querySelector('.score-points');
+const big = document.querySelectorAll('.big');
+const medium = document.querySelectorAll('.medium');
+const small = document.querySelectorAll('.small');
+
+let counter = 0;
 
 let random = Math.random().toString().slice(0, 3) * 10;
 console.log(random);
@@ -41,8 +47,29 @@ function start() {
 
 container.style.backgroundImage = `url(img/${background[random]})`;
 
+big.forEach((el) => {
+    el.classList.add('nonactive');
+})
+
+medium.forEach((el) => {
+    el.classList.add('nonactive');
+})
+
+small.forEach((el) => {
+    el.classList.add('nonactive');
+})
+
 modalRulesCloseBtn.addEventListener('click', function() {
     modalRules.classList.add('nonactive');
     body.classList.add('active');
     start();
+    big.forEach((el) => {
+        el.classList.remove('nonactive');
+    });
+    medium.forEach((el) => {
+        el.classList.remove('nonactive');
+    });
+    small.forEach((el) => {
+        el.classList.remove('nonactive');
+    });
   })
