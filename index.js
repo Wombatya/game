@@ -129,10 +129,23 @@ modalEndCloseBtn.addEventListener('click', function(event) {
     event.preventDefault();
     modalEnd.classList.remove('active');
     modalBoard.classList.add('active');
-    const userData = {
-    }
-    userData.name = input.value
-        userData.score = counter;
+    if (localStorage.length === 0) {
+    const userData = [];
+    userData.unshift([`name: ${input.value}, score: ${counter}`]);
         let userId = Date.now().toString(); 
     localStorage.setItem(userId, JSON.stringify(userData));
-    })
+    }
+    else {
+            const key = localStorage.key(0);
+            const value = localStorage.getItem(key); 
+           const info = JSON.parse(value);
+    if (info.length < 10) {
+        info.unshift([`name: ${input.value}, score: ${counter}`]);
+    }
+    else {
+        info.pop();
+        info.unshift([`name: ${input.value}, score: ${counter}`]);
+    }
+    localStorage.setItem(key, JSON.stringify(info));
+    }
+})
