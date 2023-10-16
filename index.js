@@ -35,7 +35,7 @@ let background = [
 
 function start() {
     let startTime = new Date();
-    let stopTime = startTime.setSeconds(startTime.getSeconds() + 12);
+    let stopTime = startTime.setSeconds(startTime.getSeconds() + 32);
     let countdown = setInterval(function() {
     let now = new Date().getTime();
     let remain = stopTime - now; 
