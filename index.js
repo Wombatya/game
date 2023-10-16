@@ -14,6 +14,7 @@ const finalScore = document.querySelector('.final-score');
 const modalForm = document.getElementById('modalForm');
 const modalEndCloseBtn = document.querySelector('.modal-end-close');
 const modalBoard = document.querySelector('.modal-board');
+let input = document.querySelector('input');
 
 let counter = 0;
 
@@ -34,7 +35,7 @@ let background = [
 
 function start() {
     let startTime = new Date();
-    let stopTime = startTime.setSeconds(startTime.getSeconds() + 32);
+    let stopTime = startTime.setSeconds(startTime.getSeconds() + 12);
     let countdown = setInterval(function() {
     let now = new Date().getTime();
     let remain = stopTime - now; 
@@ -128,4 +129,10 @@ modalEndCloseBtn.addEventListener('click', function(event) {
     event.preventDefault();
     modalEnd.classList.remove('active');
     modalBoard.classList.add('active');
-})
+    const userData = {
+    }
+    userData.name = input.value
+        userData.score = counter;
+        let userId = Date.now().toString(); 
+    localStorage.setItem(userId, JSON.stringify(userData));
+    })
