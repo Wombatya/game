@@ -21,18 +21,20 @@
         <div class="modal-end-content">
           <h2 class="modal-end-heading"> Time is over</h2>
           <span>You score: <span class='final-score'> 0</span> </span>
-
+          <form id="modalForm" class="modal-form">
           <label class="input-text" for="player-name">Enter your name</label>
-          <input class="field" type="text" name="player-name"/>
-
-          <button class='modal-end-close'>Submit</button>
+          <input class="field" type="text" name="player-name" required/>
+          
+          <button type="submit" class='modal-end-close'>Submit</button>
+          
+          </form>
         </div>
       </div>
 
       <div class="modal-board">
         <div class="modal-board-content">
           <h2 class="modal-end-heading"> Last 10 games</h2>
-          <div class="games"></div>
+          <div class="result"></div>
         </div>
       </div>
 

@@ -9,7 +9,11 @@ const big = document.querySelectorAll('.big');
 const medium = document.querySelectorAll('.medium');
 const small = document.querySelectorAll('.small');
 const hit = document.querySelector('.hit');
-const miss = document.querySelector('.miss')
+const miss = document.querySelector('.miss');
+const finalScore = document.querySelector('.final-score');
+const modalForm = document.getElementById('modalForm');
+const modalEndCloseBtn = document.querySelector('.modal-end-close');
+const modalBoard = document.querySelector('.modal-board');
 
 let counter = 0;
 
@@ -50,6 +54,7 @@ function start() {
         el.classList.add('nonactive');
     });
       modalEnd.classList.add('active');
+      finalScore.textContent = counter;
       body.classList.remove('active');
     }
       }, 1000);
@@ -119,3 +124,8 @@ modalRulesCloseBtn.addEventListener('click', function() {
     this.currentTime = 0.0;
    }
 
+modalEndCloseBtn.addEventListener('click', function(event) {
+    event.preventDefault();
+    modalEnd.classList.remove('active');
+    modalBoard.classList.add('active');
+})
