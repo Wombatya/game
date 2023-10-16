@@ -15,6 +15,7 @@ const modalForm = document.getElementById('modalForm');
 const modalEndCloseBtn = document.querySelector('.modal-end-close');
 const modalBoard = document.querySelector('.modal-board');
 let input = document.querySelector('input');
+const result = document.querySelector('.result');
 
 let counter = 0;
 
@@ -148,4 +149,10 @@ modalEndCloseBtn.addEventListener('click', function(event) {
     }
     localStorage.setItem(key, JSON.stringify(info));
     }
+    const key = localStorage.key(0);
+const value = localStorage.getItem(key); 
+const info = JSON.parse(value);
+info.forEach((el) => {
+    result.innerHTML += `<li>${el}<br>`;
 })
+});
